@@ -7,7 +7,7 @@ Thomas Albin. "Space Science with Python". _Github_, https://github.com/ThomasAl
 
 Thomas Albin. "Space Science with Python". _YouTube_, https://www.youtube.com/channel/UCvuCPVj5zTjxdR-EcatFfUg.
 
-The play is to work through each tutorial step by step, copying data and code (including Jupyter notebooks) as I go.
+The plan is to work through each tutorial step by step, copying data and code (including Jupyter notebooks) as I go.
 
 # Space Science with Python
 This repository is part of a "Space Science with Python" tutorial series. The corresponding articles that explain each part are available on Medium (https://medium.com/@thomas.albin). If you do not have a Medium account, feel free to use the Medium Friends Links listed below
