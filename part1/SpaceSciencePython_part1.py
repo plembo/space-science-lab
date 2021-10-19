@@ -21,20 +21,13 @@ DATE_TODAY = datetime.datetime.today()
 # convert the datetime to a string, replacing the time with midnight
 DATE_TODAY = DATE_TODAY.strftime('%Y-%m-%dT00:00:00')
 
-# convert the utc midnight string to the corresponding ET
-ET_TODAY_MIDNIGHT = spiceypy.utc2et(DATE_TODAY)
-
-#%%
-
-# oh... an error occurred. The error tells us that a so called "kernel" is
-# missing. These kernels store all information that are required for time
-# conversion, pointing, position determination etc. For this tutorial the Git
+# For this tutorial the Git
 # repository contains already the necessary kernel. We need to load it first
 spiceypy.furnsh('../_kernels/lsk/naif0012.tls')
 
 #%%
 
-# Let's re-try our first time conversion command
+# Let's try our first time conversion command
 ET_TODAY_MIDNIGHT = spiceypy.utc2et(DATE_TODAY)
 
 #%%
@@ -54,20 +47,13 @@ print(ET_TODAY_MIDNIGHT)
 # et : The ET of the computation
 # ref : The reference frame. Here, it is ECLIPJ2000 (so Medium article)
 # obs :  The observer respectively the center of our state vector computation
-EARTH_STATE_WRT_SUN, EARTH_SUN_LT = spiceypy.spkgeo(targ=399, \
-                                                    et=ET_TODAY_MIDNIGHT, \
-                                                    ref='ECLIPJ2000', \
-                                                    obs=10)
 
-#%%
-
-# An error occured. Again a kernel error. Well, we need to load a so called
-# spk to load positional information:
+# Load a so called spk to load positional information:
 spiceypy.furnsh('../_kernels/spk/de432s.bsp')
 
 #%%
 
-# Let's re-try the computation again
+# Let's re-try the computation
 EARTH_STATE_WRT_SUN, EARTH_SUN_LT = spiceypy.spkgeo(targ=399, \
                                                     et=ET_TODAY_MIDNIGHT, \
                                                     ref='ECLIPJ2000', obs=10)
