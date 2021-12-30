@@ -1,4 +1,7 @@
 # Notes
 
 ## Glossary
-w.r.t. = "with regard to"
+UTC. Coordinated Universal Time
+ET. Ephemeris Time
+w.r.t. "with regard to"
+
